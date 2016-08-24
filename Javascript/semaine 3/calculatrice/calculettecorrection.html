@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+
+        // recuperer une operation
+        var operation = prompt('operation : + - * / ?');
+
+        // recuperer une 1ere valeur
+        var valeur1 = parseInt(prompt('valeur1? '));
+
+        // recuperer une 2eme valeur
+        var valeur2 = parseInt(prompt('valeur2? '));
+
+        // calculer le resultat de l'operation
+
+        // si valeurs numeriques invalides
+        if( isNaN( valeur1 ) || isNaN( valeur2 ) ){
+            alert('valeurs invalides');
+        } else { // sinon
+            var resultat ;
+            
+            /*
+            if( operation == '+')
+                resultat = valeur1 + valeur2;
+            else if( operation == '-')
+                resultat = valeur1 - valeur2;
+            else if( operation == '*')
+                resultat = valeur1 * valeur2;
+            else if( operation == '/')
+                resultat = valeur1 / valeur2;
+            else
+                alert('operation invalide');
+            */
+
+            switch(operation){
+                case '+':
+                    resultat = valeur1 + valeur2;
+                    break;
+                case '-':
+                    resultat = valeur1 - valeur2;
+                    break;
+                case '*':
+                    resultat = valeur1 * valeur2;
+                    break;
+                case '/':
+                    resultat = valeur1 / valeur2;
+                    break;
+                default:
+                    alert('operation invalide');
+                    
+            }
+            
+            /*
+            if( resultat )// si resultat existe est a une valeur
+                alert('resultat :' + resultat);
+                */
+
+            alert( resultat ? 'resultat :' + resultat : 'Calcul invalide' );
+        }
+        
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

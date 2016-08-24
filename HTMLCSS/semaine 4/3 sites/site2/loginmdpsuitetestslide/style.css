@@ -1,0 +1,179 @@
+*{
+font-family: arial;
+font-weight: bold;
+box-sizing:border-box;
+text-decoration:none;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+#page1{
+  background-attachment: fixed;
+  background-image: url("qUd19OiANAs.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 105vh;
+  width: 100vw;
+  margin-left: -15px;
+  margin-top: -15px;
+  color: white;
+}
+
+nav{
+  overflow: auto;
+}
+
+nav img{
+  position: relative;
+  right: 0;
+  top: 0;
+  float: right;
+  margin-right: 20px;
+  margin-top: 15px;
+  height: 15vh;
+  width: 15vh;
+}
+
+#page1 h1{
+ border-style: dotted;
+ color: white;
+ font-size: 15vw;
+ font-weight: bold;
+ margin: 15px;
+ font-family: verdana;
+ text-align: center;
+}
+
+#page1 .formulaire{
+ overflow: auto;
+ display: block;
+ margin: 0 auto;
+ text-align: center;
+}
+
+.formulaire table{
+ width: 50vw;
+ height: 100%;
+ margin: 0 auto;
+ margin-bottom: 20px;
+}
+
+#page1 .formulaire td input{
+  border: 1px solid #c4c4c4;
+  padding: 10px;
+  color: #2B755D;
+  opacity: 1.0;
+  width: 100%;
+}
+
+.formulaire td{
+ text-align: left;
+}
+
+#page1 .formulaire .validation{
+ background-color: #2B755D;
+ opacity: 1.0;
+ padding: 15px;
+ border-style: none;
+ color: white;
+ width: 100%;
+ cursor: pointer;
+}
+
+
+#page2{
+  background-attachment: fixed;
+  background-image: url("_1terr_KRXo.jpg");
+  background-repeat: no-repeat;
+  z-index: -1;
+  margin-left: -8px;
+  float: left;
+  clear: both;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: contain;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center top;
+  height: 100vh;
+  width: 100vw;
+  color: #2C2E2D;
+  opacity: 0.8;
+}
+
+#page2 h1{
+   border-style: dotted;
+   color: #2C2E2D;
+   opacity: 0.8;
+   font-size: 9vw;
+   font-weight: bold;
+   margin: 50px;
+   font-family: verdana;
+   text-align: center;
+ }
+
+#page2 .formulaire .validation{
+  background-color: #2C2E2D;
+  opacity: 0.8;
+  padding: 15px;
+  border-style: none;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+}
+
+#page2 .formulaire td input{
+  border: 1px solid #c4c4c4;
+  padding: 10px;
+  color: #2C2E2D;
+  opacity: 0.8;
+  width: 100%;
+}
+
+  /*Le slide*/
+#slideshow {
+    position: relative;    /*le parent positionné*/
+    width: 100vh;
+}
+
+#sContent {
+    position: absolute;   /*on sort l'élément du flux*/
+    top: 0;               /*on le positionne précisément dans ...*/
+    left: 0;              /*l'angle haut gauche de son parent positionné*/
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+
+  /*CSS3 transition*/
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
+#slideshow .next, #slideshow .prev {
+    position: absolute;
+    top: 65px;
+    z-index: 20;
+}
+#slideshow .prev { top: 0; }
+#slideshow .next { top: 0; }
+
+/* initialisation */
+#slideshow .next, #slideshow .prev { display: none; }
+#slideshow .next1 { display: block; }
+
+/* Vers 1ère étape */
+#s1:target #sContent { top: 0px; }
+#s1:target .next, #s1:target .prev { display: none; }
+#s1:target .next1 { display: block; }
+
+/* Vers 2ème étape */
+#s2:target #sContent { top: -104vh; } /*ou -200%*/
+#s2:target .next, #s2:target .prev { display: none; }
+#s2:target .prev2 { display: block; }

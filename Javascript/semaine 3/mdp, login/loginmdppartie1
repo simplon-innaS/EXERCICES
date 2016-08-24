@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login / password</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var found = true;
+    var saisieLogin = prompt("Saisissez votre login");
+    var login = "joe@gmail.com";
+
+    while (found){
+      if (saisieLogin == login){
+        alert("Login correct");
+        found = false;
+        break;
+      }
+      else if (saisieLogin.indexOf("@") < 1){
+        alert("Mauvais format");
+      }
+      else if (saisieLogin.length < 4){
+        alert("Le login doit comporter au moins 4 caractères");
+      }
+      else {
+        alert("Login incorrect");
+        //found = true;
+      }
+     saisieLogin = prompt("Saisissez votre login");
+   }
+
+   var found = true;
+   var saisieMdp = prompt("Saisissez votre mot de passe");
+   var mdp = "12345";
+
+   while (found){
+      if(saisieMdp == mdp){
+        alert("Mot de passe correct");
+        found = false;
+        break;
+      }
+      else if (saisieMdp.length < 4){
+        alert("Le mot de passe doit comporter au moins 4 caractères");
+      }
+      else {
+        alert("Mot de passe incorrect");
+        //found = true;
+      }
+      saisieMdp = prompt("Saisissez votre mot de passe");
+    }
+    alert("Bienvenue")
+
+    </script>
+  </body>
+</html>

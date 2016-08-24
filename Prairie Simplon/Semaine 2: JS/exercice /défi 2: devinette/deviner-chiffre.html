@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+    var nbrDeviner = prompt("Deviner le chiffre compris entre 0 et 9?");
+    var reponse = Math.floor((Math.random()* 10) + 1);
+    var compteur = 0;
+    var saisie;
+
+    do {
+      saisie = nbrDeviner;
+      compteur ++;
+        if(saisie > reponse){
+          alert("c'est moins");
+          saisie = nbrDeviner;
+        }
+        else{
+          alert("c'est plus");
+          saisie = nbrDeviner;
+        }
+    } while (saisie != reponse)
+      alert ("BRAVO !!!!");
+
+
+
+/*
+var cpt = 0;    // nb de coups
+var saisie;
+var msg = 'Le nombre à deviner est compris entre 1 et 100.';
+do
+{
+     saisie = prompt(msg);
+     cpt++;
+     // message a afficher au prochain tour :
+     if(saisie > nb)
+          msg = "C'est moins";
+     else
+          msg = "C'est plus";
+}
+while(saisie != nb);
+
+
+alert("Bravo, tu as gagne en " + cpt + " coups !");
+
+
+
+   console.log('Bravo');
+        compteur == 1;
+      } while(compteur < 1){
+        if(deviner < reponse){
+          console.log("plus");
+          prompt("Deviner le chiffre compris entre 0 et 9?");
+          compteur ++;
+        }
+        else {
+          console.log("moins");
+        }
+        if (compteur == 1){
+          console.log("Fin");
+        }
+*/
+    </script>
+  </body>
+</html>

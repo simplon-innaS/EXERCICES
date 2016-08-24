@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css"/>
+    <title>Airbnb</title>
+  </head>
+  <body>
+
+    <div id="contenu-haut">
+        <div id="image">
+          <img src="fond.png"/>
+        </div>
+        <nav>
+          <ul id="menu-haut">
+              <div><a href="#"><img src="logo.png"></a></div>
+              <li><span>Devenez hôte</span></li>
+              <li>Aide</li>
+              <li>Inscription</li>
+              <li>Connexion</li>
+          </ul>
+        </nav>
+
+        <div id="texte-centrale" style="font-size: 1em;">
+          <h1 style="font-size: 70px; margin-bottom:10px">VIVEZ LÀ-BAS</h1>
+          <div>Réservez des logements auprès d'hôtes locaux dans plus de 191 pays et vivez là-bas, comme chez vous.</div>
+        </div>
+
+        <div id="recherche">
+          <form method="post" action="airbnb.html">
+          <p><input type="text" name="pseudo" placeholder="Où ?"/></p>
+
+          <p><input type="date" placeholder="Arrivé"/></p>
+
+          <select name="nbr-voyageur" style="font-size: 1em;">
+            <option value="1">1 voyageur</option>
+            <option value="2">2 voyageurs</option>
+            <option value="3">3 voyageurs</option>
+            <option value="4">4 voyageurs</option>
+            <option value="5">5 voyageurs</option>
+            <option value="6">6 voyageurs</option>
+            <option value="7">7 voyageurs</option>
+            <option value="8">8 voyageurs</option>
+            <option value="9">9 voyageurs</option>
+            <option value="10">10 voyageurs</option>
+            <option value="11">11 voyageurs</option>
+            <option value="12">12 voyageurs</option>
+            <option value="13">13 voyageurs</option>
+            <option value="14">14 voyageurs</option>
+            <option value="15">15 voyageurs</option>
+            <option value="16etplus">16 voyageurs et +</option>
+          </select>
+          <input type="submit" value="Rechercher" />
+          </form>
+        </div>
+
+        <div id="bordure"></div>
+      </div>
+
+      <div id="contenu-bas">
+        <div id="premier-bloc">
+          <a><img src="bloc-airbnb.png"/></a>
+          <div>
+            <h2>Ouvrez la porte à un</br> voyageur et à une</br> nouvelle vie</h2>
+            <p>Gagnez de l'argent en accueillant des</br>voyageurs.</p>
+            <input type="submit" value="Estimer vos revenues"/>
+          </div>
+        </div>
+
+        <div id="texte-contenu-bas">
+          <h2>Juste pour le week-end</h2>
+          <p>Découvrer de nouveaux logement incroyables près de chez vous</p>
+        </div>
+
+        <div id="blocs-du-bas">
+            <div id="un-bloc-bas"><img src="annecy.jpeg"/><span id="annecy">Annecy</span></div>
+            <div id="deux-bloc-bas"><img src="geneve.jpeg"/><span id="geneve">Genève</span></div>
+            <div id="trois-bloc-bas"><img src="montpellier.jpeg"/><span id="montpellier">Montpellier</span></div>
+        </div>
+      </div>
+  </body>
+</html>

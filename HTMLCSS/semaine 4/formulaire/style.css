@@ -1,0 +1,66 @@
+*{
+  font-family: arial;
+  color: white;
+  font-weight: bold;
+  box-sizing:border-box;
+
+}
+body{
+  background-image: url("kmK62QLO_aM.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav{
+  overflow: auto;
+}
+nav img{
+  position: relative;
+  right: 0;
+  top: 0;
+  float: right;
+  margin-right: 20px;
+}
+
+h1{
+  border-style: dotted;
+   color: white;
+   font-size: 150px;
+   font-weight: bold;
+   font-family: verdana;
+   text-align: center;
+   margin: 20px;
+ }
+
+#formulaire{
+  overflow: auto;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#formulaire table{
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+#formulaire td input{
+   border: 1px solid #c4c4c4;
+   padding: 10px;
+   color: #2B755D;
+   width: 100%;
+}
+
+#formulaire td{
+  text-align: left;
+}
+
+#formulaire .validation{
+  background-color: #2B755D;
+  opacity: 0.9;
+  padding: 15px;
+  border-style: none;
+  color: white;
+  width: 100%;
+}

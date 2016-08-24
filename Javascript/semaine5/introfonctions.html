@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Intro fonctions</title>
+  </head>
+  <body>
+    <script>
+    var voyelles = "aeiouy";
+
+      // la fonction reçoit un caractère en paramètre et doit renvoyer true si le texte contient une voyelle, false sinon
+      function estUneVoyelle( lettre ){
+  	var bool;
+        for(i=0; i<voyelles.length; i++){
+          if(voyelles[i] == lettre){
+            bool = true;
+            break;
+          }else{
+          	bool = false;
+          }
+        }
+        return bool;
+      }
+
+      console.log("estUneVoyelle('f') :", estUneVoyelle('f') ); // false
+      console.log("estUneVoyelle('a') :", estUneVoyelle('a') ); // true
+      console.log("estUneVoyelle() :", estUneVoyelle() ); // false
+
+
+      // la fonction reçoit un texte en paramètre et renvoie true si il contient une voyelle
+      function contientUneVoyelle( texte ){
+        for(i = 0; i < texte.length ; i++){
+          if( voyelles.indexOf(texte[i]) != -1){
+            return true;
+          }
+        }
+        return false;
+      }
+
+      console.log( contientUneVoyelle('toto') ); // true
+      console.log( contientUneVoyelle('cdrf') ); // false
+
+      // la fonction reçoit un texte en paramètre et doit renvoyer le nombre de voyelle dans le texte
+      function compteVoyelle( texte ){
+        var compteur = 0;
+        for(var i = 0; i < texte.length ; i++){
+          if(voyelles.indexOf(texte[i]) != -1){
+            compteur++;
+          }
+        }
+        return compteur;
+      }
+      var resultat = compteVoyelle("Coucou"); // 4
+
+      console.log('resultat :', resultat);
+
+
+
+    </script>
+  </body>
+</html>

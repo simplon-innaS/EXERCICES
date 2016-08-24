@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pays, Capitale</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var pays = [
+      {pays: 'la France', capitale: 'Paris'},
+      {pays: 'l\'Espagne', capitale: 'Madrid'},
+      {pays: 'l\'Italie', capitale: 'Rome'},
+      {pays: 'la Belgique', capitale: 'Bruxelles'}
+    ];
+    var paysHasard = pays[Math.floor(Math.random()*pays.length)].pays;
+    console.log(paysHasard);
+    // console.log(pays[1].capitale);
+
+    var userReply = prompt("Quelle est la capitale de" +paysHasard)
+    if(userReply == pays[].capitale){
+      console.log("tu as gagné")
+    }
+
+
+
+    var pays = [
+  {pays: 'France', capitale: 'Paris'},
+  {pays: 'Espagne', capitale: 'Madrid'},
+  {pays: 'Italie', capitale: 'Rome'},
+  {pays: 'Belgique', capitale: 'Bruxelles'}
+  ];
+  var paysHasard = pays[Math.floor(Math.random()*pays.length)].pays;
+  var reponseCapitale = pays.capitale;
+  var resultat = indexOf(paysHasard) == indexOf(reponseCapitale);
+  console.log(paysHasard);
+
+  var reponseUtil = prompt("Quelle est la capitale de " +paysHasard);
+  if(reponseUtil == resultat){
+  console.log("tu as gagné");
+  }else{
+  console.log("tu as perdu");
+  }
+  console.log(reponseUtil);
+  console.log(resultat);
+
+
+
+  var pays = [
+        {pays: 'France', capitale: 'Paris'},
+        {pays: 'Espagne', capitale: 'Madrid'},
+        {pays: 'Italie', capitale: 'Rome'},
+        {pays: 'Belgique', capitale: 'Bruxelles'}
+      ];
+  var paysHasard = pays[Math.floor(Math.random()*pays.length)].pays;
+  console.log(paysHasard);
+  console.log(pays.indexOf(paysHasard));
+  var reponseUtil = prompt("Quelle est la capitale de " + paysHasard);
+  //	if(reponseUtil == ){
+  //	  console.log("tu as gagné");
+  //	}else{
+  //		console.log("tu as perdu");
+  //	}
+  	console.log(reponseUtil);
+
+
+
+    var pais = [
+        {pays: 'France', capitale: 'Paris'},
+        {pays: 'Espagne', capitale: 'Madrid'},
+        {pays: 'Italie', capitale: 'Rome'},
+        {pays: 'Belgique', capitale: 'Bruxelles'}
+      ];
+
+for (var id in pais) {
+	var index = Math.floor(Math.random()*pais.length);
+	var rd = pais[index].pays;
+	console.log(index +  " l'index de "+ rd);
+}
+
+
+var pais = [
+        {pays: 'France', capitale: 'Paris'},
+        {pays: 'Espagne', capitale: 'Madrid'},
+        {pays: 'Italie', capitale: 'Rome'},
+        {pays: 'Belgique', capitale: 'Bruxelles'}
+      ];
+
+for (i = pais.length ; i > 0 ; i--) {
+	var index = Math.floor(Math.random()*pais.length);
+	var rd = pais[index].pays;
+	console.log( " l'index de "+ rd);
+	pais.splice(index , 1);
+}
+
+
+
+
+
+var pais = [
+        {pays: 'France', capitale: 'Paris'},
+        {pays: 'Espagne', capitale: 'Madrid'},
+        {pays: 'Italie', capitale: 'Rome'},
+        {pays: 'Belgique', capitale: 'Bruxelles'}
+      ];
+
+for(var loop in pais){
+	var index = Math.floor(Math.random()*pais.length);
+	var reponseUtil = prompt('Quelle est la capitale de :' + pais[index].pays);
+	if(reponseUtil == pais[index].capitale){
+	alert("ok");
+	}else{
+	alert('non');
+	}
+}
+
+    </script>
+  </body>
+</html>

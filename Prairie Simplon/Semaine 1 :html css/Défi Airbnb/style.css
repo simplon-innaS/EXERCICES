@@ -1,0 +1,193 @@
+*{
+  font-family: Arial;
+}
+
+body{
+  margin:0;
+  padding:0;
+}
+
+body{
+  background-color: #DFE5E4;
+}
+
+#image img{
+  height: 700px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+#image{
+  text-align: center;
+}
+
+#menu-haut{
+  position: relative;
+}
+
+#menu-haut li{
+  padding-right: 15px;
+  float: left;
+  list-style: none;
+  color: white;
+  z-index: 2;
+  position: relative;
+  top: -730px;
+  left: 960px;
+}
+
+#menu-haut li span{
+  border: 2px solid white;
+  padding: 5px;
+}
+
+#menu-haut img{
+  height: 30px;
+  width: 100px;
+  position: relative;
+  top: -700px;
+  z-index: 3;
+  left: -20px;
+}
+
+#texte-centrale{
+  position: relative;
+  padding: 1px;
+  top: -580px;
+  text-align: center;
+  color: white;
+  z-index: 4;
+}
+
+#recherche{
+  position: relative;
+  top: -290px;
+  left: 300px;
+  width: 700px;
+  z-index: 5;
+}
+
+#recherche p{
+  float: left;
+  margin: 0 auto;
+}
+
+#bordure{
+  background-color: rgba(0,0,0,0.6);
+  bottom: 0;
+  left: -80px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  position: absolute;
+  right: 0;
+  height: 50px;
+  z-index: 2;
+  top: 590px;
+  width: 1440px;
+}
+
+#contenu-bas{
+  height: 550px;
+}
+
+#premier-bloc{
+  width: 70%;
+  height: 300px;
+  background-color: white;
+  position: absolute;
+  left: 15%;
+  bottom: -225px;
+}
+
+#premier-bloc input{
+   background-color: #009aab;
+   color: white;
+   font-weight : bold;
+   padding-top: 12px;
+   padding-bottom: 12px;
+   padding-right: 70px;
+   padding-left: 70px;
+   position: relative;
+}
+
+#premier-bloc img {
+  height: 300px;
+  float: left;
+}
+
+#premier-bloc div{
+  position: relative;
+  left: 5%;
+  top: 10%;
+  display: block;
+  float: none;
+}
+
+#texte-contenu-bas{
+  position: relative;
+  bottom: -90px;
+  text-align: center;
+}
+
+#un-bloc-bas img{
+  width: 22%;
+  height: 300px;
+  position: absolute;
+  bottom: -650px;
+  left: 15%;
+  display: flex;
+  text-align: center;
+  z-index: 1;
+}
+
+#deux-bloc-bas img{
+  width: 22%;
+  height: 300px;
+  position: absolute;
+  bottom: -650px;
+  left: 39%;
+  display: flex;
+}
+
+#trois-bloc-bas img{
+  width: 22%;
+  height: 300px;
+  position: absolute;
+  bottom: -650px;
+  left: 63%;
+  display: flex;
+}
+
+#annecy{
+  position: absolute;
+  bottom: -500px;
+  left: 22%;
+  color: white;
+  z-index: 2;
+  font-size: 35px;
+  font-weight : bold;
+  display: flex;
+}
+
+#geneve{
+  position: absolute;
+  bottom: -500px;
+  left: 46%;
+  color: white;
+  z-index: 2;
+  font-size: 35px;
+  font-weight : bold;
+  display: flex;
+}
+
+#montpellier{
+  position: absolute;
+  bottom: -500px;
+  left: 68%;
+  color: white;
+  z-index: 2;
+  font-size: 35px;
+  font-weight : bold;
+  display: flex;
+}

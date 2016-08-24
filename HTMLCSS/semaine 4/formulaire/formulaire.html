@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" />
+     <link rel="shortcut icon" type="image/x-icon" href="logo-fenetre.jpg" />
+
+    <title>Formulaire</title>
+  </head>
+  <body>
+    <header>
+        <nav><img src="logo.jpeg"/></nav>
+    </header>
+    <div id="welcome"><h1>WELCOME</h1></div>
+
+    <form method="post" action="formulaire.html">
+    <div id="formulaire">
+      <table>
+        <tr>
+          <td>
+            <p>Identifiant</p>
+          </td>
+          <td>
+            <input type="text" placeholder="user@mail.com"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Mot de passe </p>
+          </td>
+          <td>
+            <input type="password" placeholder="*******" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="submit" class="validation" value="Mot de passe perdu"/><br/>
+          </td>
+          <td>
+            <input type="submit" class="validation" value="Envoyer" />
+          </td>
+        </tr>
+      </table>
+
+      <input type="checkbox" name="memomdp" checked /> <label for="memomdp">Mémoriser mot de passe</label>
+    </div>
+  </form>
+
+  </body>
+</html>

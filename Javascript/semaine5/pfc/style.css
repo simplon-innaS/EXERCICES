@@ -1,0 +1,25 @@
+*{
+    font-family: 'Waiting for the Sunrise', cursive;
+    font-size: 50px;
+}
+#titre{
+  text-align: center;
+  margin: 40px;
+}
+img{
+  height: 50%;
+  width: 25%;
+  margin: 0 auto;
+}
+
+.img-scale:hover{
+  transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+}
+
+#contenu-image{
+  text-align: center;
+
+}

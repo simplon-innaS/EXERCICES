@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calcul mental</title>
+  </head>
+
+  <body>
+    <script>
+    //on places toutes les variables
+    var nombre1 = parseInt(Math.round(Math.random()*10));//variable nombre 1 aléatoire
+    var nombre2 = parseInt(Math.round(Math.random()*10));//variable nombre 2 aléatoire
+    var operateur_arr = ['+','-','*']; //variable du tableau
+    var operateurHasard = operateur_arr[Math.floor(Math.random()*operateur_arr.length)];//variable
+    var calculHasard = nombre1 + operateurHasard + nombre2;
+    var resultat = eval(nombre1 + operateurHasard + nombre2);
+    console.log("resultat:"+resultat);
+    var question = prompt('Combien font' +' '+ calculHasard);
+    var found = true;
+    while(found){
+      if (question == resultat){
+        console.log('Bravo');
+      }
+      else {
+        alert('Faux, recommence')
+        question = prompt('Combien font' +' '+ calculHasard);
+      }
+    }
+    </script>
+  </body>
+</html>

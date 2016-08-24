@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css"/>
+    <title>Site bloc</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul id="menu-haut">
+          <h3>
+            <li style="font-size: 23px;">DaWeb</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+          </h3>
+        </ul>
+      </nav>
+      <div id="menu-bas">
+        <span style="font-size: 33px;">Développement </span>
+        <span style="font-size: 25px; color: #707F7D;">Web & Mobile</span>
+        <hr>
+      </div>
+    </header>
+
+    <div id="contenu">
+
+      <div class="blocs">
+        <a><img src="https://placehold.it/200x80"/></a>
+        <a><img src="https://placehold.it/200x80"/></a>
+        <a><img src="https://placehold.it/200x80"/></a>
+        <a><img src="https://placehold.it/200x80"/></a>
+      </div>
+
+      <div class="blocs">
+        <a><img src="https://placehold.it/200x80"/></a>
+        <a><img src="https://placehold.it/200x80"/></a>
+        <a><img src="https://placehold.it/200x80"/></a>
+        <a><img src="https://placehold.it/200x80"/></a>
+      </div>
+
+      <div class="blocs">
+        <a><img src="https://placehold.it/200x120"/></a>
+        <a><img src="https://placehold.it/200x80"/></a>
+        <a><img src="https://placehold.it/200x80"/></a>
+        <a><img src="https://placehold.it/200x80"/></a>
+      </div>
+
+      <div class="blocs">
+        <a><img src="https://placehold.it/200x120"/></a>
+        <a><img src="https://placehold.it/200x80"/></a>
+        <a><img src="https://placehold.it/200x80"/></a>
+        <a><img src="https://placehold.it/200x50"/></a>
+      </div>
+
+      <div class="blocs">
+        <a><img src="https://placehold.it/200x140"/></a>
+        <a><img src="https://placehold.it/200x80"/></a>
+        <a><img src="https://placehold.it/200x80"/></a>
+        <a><img src="https://placehold.it/200x80"/></a>
+      </div>
+    </div>
+
+    <footer>
+
+    </footer>
+  </body>
+</html>

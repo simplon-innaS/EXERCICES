@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="logo-fenetre.jpg" />
+  <title>Formulaire</title>
+</head>
+<body>
+  <div id="slideshow">
+    <div id="s1">
+      <div id="s2">
+          <ul id="sContent">
+            <li>
+              <div id="page1">
+                <header>
+                  <nav><img src="logo.jpeg"/></nav>
+                </header>
+                <div id="welcome"><h1 id="titrePage1">WELCOME</h1></div>
+
+                <div class="formulaire">
+                  <table>
+                    <tr>
+                      <td>
+                        <p>Identifiant</p>
+                      </td>
+                      <td>
+                        <input id="login" type="text" class="verifIdentification" placeholder="myname@gmail.com"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>Mot de passe </p>
+                      </td>
+                      <td>
+                        <input id="mdp" type="password" placeholder="*******" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#s2"><input type="submit" class="validation" value="Créer votre compte" /></a><br/>
+                      </td>
+                      <td>
+                        <input type="button" class="validation" value="Envoyer" onclick="verifIdentification();" />
+                      </td>
+                    </tr>
+                  </table>
+                  <input style="margin-bottom:10px;" type="checkbox" name="memomdp" checked /> <label for="memomdp">Mémoriser mot de passe</label>
+                </div>
+              </div>
+            </li>
+
+            <script type="text/javascript">
+            var login = ["joe@gmail.com", "chloe@gmail.com", "marie@gmail.com", "julien@gmail.com", "tony@gmail.com", "denis@gmail.com"];
+            var mdp = ["joe1987", "chloe69", "marie0000", "12344321", "1234", "denis123"];
+            var loginInput = document.getElementById("login").value; // on dit .value psk on veut recuperer la valeur ds le champs login
+            var mdpInput = document.getElementById("mdp").value;
+
+            function verifIdentification(){
+              loginInput = document.getElementById("login").value;
+              mdpInput = document.getElementById("mdp").value;
+
+              if(login.indexOf(loginInput) !== -1 && mdp.indexOf(mdpInput) !== -1 ){ //le -1 veut dire que qu'il n'ai pas ds l'array, ici on regarde si c'est different de -1 donc si il est dans le array
+              alert(login.indexOf(loginInput));//on alert la valeur de la saisie (par rapport au tableau, à quelle index il se situe ?)
+              alert(mdp.indexOf(mdpInput));
+              if(login.indexOf(loginInput) == mdp.indexOf(mdpInput)){//on verifie si les index correspondent
+                alert("Hello");
+              }else if(login.indexOf(loginInput) !== mdp.indexOf(mdpInput)){//si ils ne correpondent pas
+                alert("L'identifiant et le mot de passe ne correspondent pas")
+              }
+            }else{ //dans le cas contraire donc (= login.indexOf(loginInput) && mdp.indexOf(mdpInput) == -1)
+              alert("L'identifiant ou le mot de passe n'exite pas, créer votre compte");
+            }
+          }
+          </script>
+          <div id="page2">
+              <div><h1>CREER VOTRE COMPTE</h1></div>
+
+              <div class="formulaire">
+                <table>
+                  <tr>
+                    <td>
+                      <p>Identifiant</p>
+                    </td>
+                    <td>
+                      <input id="nouveauLogin" type="text" placeholder="myname@gmail.com"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Mot de passe </p>
+                    </td>
+                    <td>
+                      <input id="nouveauMdp" type="password" placeholder="*******" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#s1"><input type="submit" class="validation" value="S'identifier" /></a>
+                    </td>
+                      <td>
+                        <input type="button" class="validation" value="Envoyer" onclick="nouveauCompte();" />
+                      </td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+            <script>
+            function nouveauCompte(){
+                nouveauLoginInput = document.getElementById("nouveauLogin").value;
+                nouveauMdpInput = document.getElementById("nouveauMdp").value;
+
+                if(nouveauLoginInput !== "" && nouveauMdpInput !== ""){
+                  if (nouveauLoginInput.indexOf("@") < 1){
+                    alert("Mauvais format, pour rappel il doit comporter au moins un @");
+                  }
+                  else if (nouveauLoginInput.length < 4){
+                    alert("Le login doit comporter au moins 4 caractères");
+                  }
+                  else if(nouveauMdpInput.length < 4){
+                    alert("Le mot de passe doit comporter au moins 4 caractères");
+                  }
+                  else{
+                    login.push(nouveauLoginInput);
+                    mdp.push(nouveauMdpInput);
+                    alert("Les login :" + login);
+                    alert("Les mots de passe :" + mdp);
+                  }
+                }
+                else{
+                  alert('Vous n\'avez rien saisi dans les ou l\'un des champs');
+                }
+              }
+            </script>
+          </div>
+        </ul>
+    </div>
+  </div>
+
+
+</body>
+</html>

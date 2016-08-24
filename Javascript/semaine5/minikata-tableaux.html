@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Minikata tableaux</title>
+  </head>
+  <body>
+    <script>
+    var prenom = "paul";
+
+    // TODO : ajouter une majuscule
+    var prenomMaj = prenom.charAt(0).toUpperCase()+prenom.substring(1);
+    console.log('prenom avec premiere lettre en majuscule :', prenomMaj) //Paul
+
+    // TODO : ajouter une majuscule à tous les prenoms de la liste
+    var users = ["joe", "lea", "bob", "ann"];
+    var lettreMaj = [];
+    for(i=0 ; i < users.length; i++){
+     lettreMaj.push(users[i].charAt(0).toUpperCase()+users[i].substring(1));
+    }
+
+    // TODO : liste des prenoms qui commencent par une voyelle
+    // TODO : liste des prenoms qui commencent par une console
+
+    var users = ["joe", "lea", "bob", "ann"];
+    var voyelles = "aeiouy";
+    var consonnes = "bcdfghjklmnpqrstvwxz";
+
+  	for(i=0 ; i < users.length; i++){
+      	if(voyelles.indexOf(users[i]) != -1){
+      		console.log(users[i] + "il y a une voyelle");
+      	}else if(consonnes.indexOf(users[i]) != -1){
+      		console.log(users[i] + "il y a une consonne");
+      	}
+      }
+
+
+
+      var notes = [10, 12, 13, 4, 8];
+
+      // TODO : calcul de la somme
+      var notesSomme = 0;
+      for(i=0 ; i < notes.length; i++){
+      	notesSomme +=notes[i]
+      }
+      console.log('somme des notes', notesSomme);
+
+      // TODO : calcul de la moyenne
+      var notesMoyenne= 0;
+      var notesSomme =0;
+
+      for(i=0; i<notes.length; i++){
+      	notesSomme += notes[i]
+      	notesMoyenne = notesSomme/notes.length;
+      }
+      console.log('moyenne', notesMoyenne);
+
+
+      var nouvelleNote = 12;
+      // TODO : ajouter la note à liste
+
+      // TODO : calcul de la nouvelle somme
+      var nouvelleNote = 12;
+      var notes = [10, 12, 13, 4, 8];
+
+      // TODO : ajouter la note à liste
+
+      // TODO : calcul de la nouvelle somme
+      notes.push(nouvelleNote);
+      var notesSomme = 0;
+      for(i=0 ; i < notes.length; i++){
+        notesSomme +=notes[i]
+        notesMoyennes = notesSomme/notes.length
+      }
+      console.log('somme des notes', notesSomme);
+      // TODO : calcul de la nouvelle moyenne
+      console.log('moyenne', notesMoyennes);
+
+
+      var notes = [10, 12, 13, 4, 8];
+
+      var notesSup = Math.max.apply(null,notes);
+      console.log(console.log('meilleure note',notesSup);
+      // TODO : trouvez la note la plus haute
+
+      var notesInf = Math.min.apply(null,notes);
+      console.log('plus mauvaise note', notesInf);
+      // TODO : trouvez la note la plus basse
+
+
+      // TODO : passage en fonctions
+      var notes = [10, 12, 13, 4, 8];
+      function calculSomme( tableauDeNotes ){
+          var notesSomme = 0;
+          for(i=0 ; i < tableauDeNotes.length; i++){
+              notesSomme +=tableauDeNotes[i];
+
+      	}
+      	return notesSomme;
+      }
+      console.log(calculSomme(notes));
+
+
+
+      var notes = [10, 12, 13, 4, 8];
+
+      function calculMoyenne( tableauDeNotes ){
+      	var notesSomme = 0;
+          var moyenne= 0;
+          for(i=0 ; i < tableauDeNotes.length; i++){
+              notesSomme +=tableauDeNotes[i];
+              moyenne = notesSomme/notes.length;
+      	}
+
+          return moyenne;
+      }
+      console.log(calculMoyenne(notes))
+
+
+    </script>
+  </body>
+</html>

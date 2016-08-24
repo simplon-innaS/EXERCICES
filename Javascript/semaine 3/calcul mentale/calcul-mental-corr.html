@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+
+        // tirage hasard d'un nombre < 100
+        var hasard = Math.floor(Math.random() * 100);
+
+        // Math.random() » [0-1]
+        // » * 100 » [0-100]
+        // [5-100] » 5 + [0-95]
+
+        var reponse;
+        while( reponse != hasard ){
+            // affciahge d'un prompt et récuperation de la reponse donnée
+            reponse = prompt('nombre entre 0 et 100');
+            reponse = parseInt(reponse);
+
+            if (isNaN(reponse)){
+                alert("ce n'est pas un nombre");
+                break;
+            }
+            else if (reponse < 0 || reponse > 100 )
+                alert("reponse invalide");
+            else {
+                // comparaison de la reponse et du nombre à trouver
+                if (reponse === hasard)
+                    alert('Bravo');
+                else {
+                    // donner un indice : plus petit, plus grand
+                    // beacoup plus petit, beacoup plus grand
+                    var indice;
+                    var difference = hasard - reponse;
+
+                    if (difference > 10)
+                        indice = 'beaucoup plus grand';
+                    else if (difference > 0)
+                        indice = 'plus grand';
+                    else if (difference < -10)
+                        indice = 'beaucoup plus petit';
+                    else
+                        indice = 'plus petit';
+
+                    /* attention à  l'ordre des conditions
+
+                     if( difference > 0)
+                     indice = 'plus grand';
+                     else if( difference > 10)
+                     indice = 'beaucoup plus grand';
+                     else if ( difference < -10 )
+                     indice = 'beaucoup plus petit';
+                     else
+                     indice = 'plus petit';*/
+
+                    alert(indice + ' - ' + hasard);
+                }
+            }
+        }
+
+
+
+
+        // répeté juqu'à réponse correcte
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
