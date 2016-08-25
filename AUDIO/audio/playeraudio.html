@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+    .musiclist ul{width: 400px;}
+    .musiclist li{
+      display: block;
+      list-style: none;
+      padding: 0 5px;
+    }
+    .musiclist li:last-child {
+      padding-top: 20px;
+  }
+  </style>
+</head>
+<body>
+  <div class="musiclist">
+<!-- informations about song -->
+    <ul>
+      <li id="titre">title </li>
+      <li id="album">album  </li>
+      <li id="artiste">artiste </li>
+<!--  <li id="temps">time <span>00:00</span> </li>-->
+      <li id="controlers">
+        <form id="btns" method="get" onsubmit="playRandom(); return false"></form>
+      </li>
+<!-- player default -->
+      <li id="media_player">
+        <audio id="track" src="./neededme.mp3" type="audio/mpeg" controls></audio>
+      </li>
+    </ul>
+  </div>
+  <script type="text/javascript">
+
+  playRandom();
+
+
+function playRandom(){
+  // recuperer la SOURCE du MP3 default
+  var playTrack = document.getElementById('track');
+  console.log(playTrack);
+
+  // cacher / supprimer le control -- player
+  playTrack.removeAttribute("controls");
+
+  // tableau des données piste
+  var PlayList = [
+    {piste: 1, artist: "Rihanna", album: "Anti", title:"Needed Me", src: "./neededme.mp3"  }, // 0
+    {piste: 2, artist: "Young Money", album: "Rise Of An Empire", title:"Senile", src: "./senile.mp3" } , // 1
+    {piste: 3, artist: "Bjork", album: "Homogenic", title:"Joga", src: "./joga.mp3"}, // 2
+    {piste: 4, artist: "Yemi Alade", album: "King of Queens", title:"Johnny", src: "./johnny.mp3"},// 3
+  ];
+
+console.log(PlayList);
+
+
+/*---------------- PARTIE A RECRIRE SELON TERME DOC PRECEDENT -----------------*/
+// recuperation de UL
+var mediaPlayer = document.getElementById('controlers');
+    piste = document.getElementById('btns');
+
+// écrire du texte dans les différents balbutiements
+function setText(el,text) {
+  el.innerHTML = text;
+}
+
+// création de PREV
+var prevBtn = document.createElement('button');
+prevBtn.type = 'button';
+mediaPlayer.appendChild(prevBtn);
+setText(prevBtn, "<");
+
+//LECTURE / PAUSE
+// création de PLAY
+var playBtn = document.createElement('button');
+playBtn.type = 'button';
+mediaPlayer.appendChild(playBtn);
+setText(playBtn, "play");
+// faire fonctionner le btn player
+playBtn.addEventListener("click", player);
+function player() {
+  if (playTrack.paused) {
+    setText(playBtn,"pause");
+    playTrack.play();
+  } else {
+    setText(playBtn,"play");
+    playTrack.pause();
+  };
+};
+
+// SON / MUET
+// couper son >> mute btn
+var muteBtn = document.createElement('button');
+muteBtn.type = 'button';
+mediaPlayer.appendChild(muteBtn);
+setText(muteBtn,"mute");
+//***deplacer
+// event sur le BTN MUTE
+muteBtn.addEventListener("click", muter);
+function muter() {
+  if (playTrack.volume == 0) {
+    setText(this,"mute");
+    playTrack.volume = 1;
+  } else {
+    setText(this,"unmute");
+    playTrack.volume = 0;
+  };
+};
+
+//*** REALY IMPORTANT
+// création de Random
+var randomBtn = document.createElement('button');
+randomBtn.type = 'button';
+mediaPlayer.appendChild(randomBtn);
+setText(randomBtn, "random");
+randomBtn.addEventListener("click", randomer);
+randomer();
+function randomer() {
+  for (var id = 0; id < PlayList.length; id++) {
+    var index = Math.floor(Math.random()*PlayList.length);
+    var randomSrc = PlayList[index].src;
+    console.log(index, " l'index de ", randomSrc);
+  }
+
+  // Remplacer la ressource SRC par nouvelle SRC RANDOM
+  document.getElementById('track').setAttribute('src', randomSrc);
+  // TOFIXED
+  // mettre lancer une function qui appel le "setAttribute"
+  // SUPPRIMER du tableauP "PlayList" la 'randomSrc'
+  //  a revoir >> var del = PlayList.splice(0,1, randomSrc);
+  // title >> title
+  document.getElementById('titre').innerHTML= PlayList[index].title;
+  document.getElementById('artiste').innerHTML= PlayList[index].artist;
+  document.getElementById('album').innerHTML= PlayList[index].album;
+  console.log(PlayList[index].title);
+};
+
+// création de Next
+var nextBtn = document.createElement('button');
+nextBtn.type = 'button';
+mediaPlayer.appendChild(nextBtn);
+setText(nextBtn, ">");
+/* -------------------------------------------------------------------------*/
+///// LES DIFFERENTS ACTIONS DES btns
+
+  // Créer un controleur volume == "range"
+  var volumeSlider = document.createElement("input");
+  volumeSlider.type = "range";
+  mediaPlayer.appendChild(volumeSlider);
+  setText(volumeSlider, "volume");
+
+  // paramétrer les attributs
+  function setAttributes(el, attrs) {
+    for(var key in attrs){
+      el.setAttribute(key, attrs[key]);
+    }
+  }
+  // attributs du curseur (souris) semblable muter()
+  setAttributes(volumeSlider, { "type": "range", "min": "0", "max": "1", "step": "any", "value": "1" });
+
+  // on donne une valeur à volume
+  volumeSlider.addEventListener("input", function(){
+    playTrack.volume = volumeSlider.value;
+  });
+
+  // sync controlers
+  playTrack.addEventListener('volumechange', volumizer);
+  function volumizer() {
+    if (playTrack.volume == 0) {
+      setText(muteBtn,"unmute");
+    } else {
+      setText(muteBtn,"mute");
+    }
+  }
+  // fin de la musique
+  playTrack.addEventListener('ended', finish);
+  function finish() {
+    playTrack.currentTime = 0;
+    setText(playButton,"Play");
+  }
+
+
+
+}
+
+//document.getElementById('track').style.display = "block";
+/*
+
+
+
+// METHODE DE COMPTAGE
+  /// ou autre syntax ou il faut parser "i" en Number(i).
+  console.log("test oF Elems")
+  for (var i in elems){
+    console.log(i, " est l'index de " , elems[i]);
+  }*/
+
+  </script>
+</body>
+</html>
