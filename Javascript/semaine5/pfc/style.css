@@ -1,14 +1,19 @@
 *{
     font-family: 'Waiting for the Sunrise', cursive;
-    font-size: 50px;
+    font-size: 5vh;
+    outline: none;
+}
+body{
+  margin: 0 auto;
 }
 #titre{
   text-align: center;
-  margin: 40px;
+  margin: 20px;
 }
+
 img{
-  height: 50%;
-  width: 25%;
+  /*height: 20vh;*/
+  width: 40vh;
   margin: 0 auto;
 }
 
@@ -17,9 +22,58 @@ img{
   -moz-transform: scale(1.05);
   -ms-transform: scale(1.05);
   -webkit-transform: scale(1.05);
+  cursor: pointer;
 }
 
 #contenu-image{
   text-align: center;
-
 }
+
+#ligne{
+  height: 1px;
+  width: 75vw;
+  left: 12.5vw;
+  position: absolute;
+  background-color: black;
+}
+
+
+#choix{
+text-align: center;
+width: 100vw;
+}
+
+.blocChoix{
+  overflow: auto;
+  float: left;
+  width: 33.33%;
+  margin-top: 10px;
+}
+
+#seeCompChoice {
+  margin-top: 20%;
+  animation-duration: 0.7s; /*la durée de l'animation à l'interieur (ce qui ce passe à l'animaiton, à l'interieur)*/
+  animation: 0.35s ease infinite alternate;
+}
+
+@keyframes monAnimation {
+  from {transform: translateY(0);}
+   to   {transform: translateY(-20px);}
+}
+
+
+.button{
+    background-color: black;
+    color: white;
+    opacity: 0.8;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    pointer-events: none;
+    border-radius: 5px;
+  }

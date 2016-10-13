@@ -1,0 +1,46 @@
+*{
+
+  color: #C8EAF3;
+}
+
+body{
+  /*background-image: url('loup2.png');
+  background-position: top;
+  background-size: auto;
+  background-repeat: no-repeat;*/
+  background-color: #0D0E09;
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+ }
+#image{
+  position: relative;
+  bottom: 300px;
+}
+p{
+  font-family:'DS-DIGITAL', 'arial';
+  width: 100vw;
+  font-size: 100px;
+  font-style: italic;
+  position: relative;
+  top: 170px;
+  right: 350px;
+  animation: neon 1s ease-in-out infinite alternate;
+  transform: rotate(-90deg)
+}
+
+@keyframes neon {
+  from{
+    text-shadow: 0 0 5px #25474E, 0 0 10px #25474E, 0 0 10px #0D5261, 0 0 20px #5A828A, 0 0 30px #5A828A;
+  }
+  to{
+    text-shadow: 0 0 2.5px #25474E, 0 0 5px #25474E, 0 0 7.5px #0D5261, 0 0 8px #5A828A, 0 0 17.5px #5A828A;
+}
+}
+
+#copyright{
+  font-size: 10px;
+  position: relative;
+  bottom: -430px;
+  left: 40%;
+}

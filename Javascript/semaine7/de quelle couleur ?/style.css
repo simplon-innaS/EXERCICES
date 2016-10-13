@@ -1,0 +1,69 @@
+*{
+  font-family: arial;
+  box-sizing:border-box;
+  font-size: 30px;
+  color: #1E9B91;
+  font-weight: bold;
+
+}
+body{
+  background-image: url("image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+h1{
+  position: absolute;
+  right: -11.2755% ;
+  top: 36.7404% ;
+  -moz-transform:rotate(90deg);
+  margin: 0;
+  font-size: 120px;
+}
+#contenu{
+  position: relative;
+  margin: 0 auto;
+  height: 250px;
+}
+
+#formulaire{
+  overflow: auto;
+  margin: 0 auto;
+}
+
+#formulaire table{
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: block;
+}
+
+#formulaire td input{
+   border: 1px solid #c4c4c4;
+   padding: 10px;
+   width: 100%;
+   text-align: center;
+}
+
+#formulaire tr{
+  width: 100%;
+}
+#page1{
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 50%;
+  left: 0;
+}
+#page2{
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 50%;
+  left: 0;
+}
+#recommenceJeux{
+  margin-top: 100px;
+}

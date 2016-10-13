@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet">
+    <title>PFCP</title>
+  </head>
+
+  <body>
+    <div id="titre">Choose your weapon</div>
+    <div id="contenu-image">
+      <img src="rock.jpg" onclick="choixPierre();" id="pierre" class="img-scale"/>
+      <img src="paper.jpg" onclick='choixPapier();' id="papier" class="img-scale"/>
+      <img src="scissors.jpg" onclick="choixCiseaux();" id="ciseaux" class="img-scale"/>
+    </div>
+    <div id="ligne"></div>
+    <div id="choix">
+      <div class="blocChoix">
+        Your choice<br/>
+        <img class="imageUtil" />
+      </div>
+      <div class="blocChoix">
+        <button type="button" name="button" class="button" onclick="jeux()" id='seeCompChoice'>See computer choice</button>
+        <button type="button" name="button" class="button" id='recommenceJeux' onclick="document.location.reload(true); return false;">Restart game</button>
+      </div>
+      <div class="blocChoix">
+        Computer choice<br/>
+        <img class="imageOrdi"/>
+      </div>
+    </div>
+
+    <script>
+    //on regarde a quelle image correpond le click de l'utilisateur
+
+    function choixPierre(){
+      choixUtil = 'pierre';
+      document.getElementsByClassName("imageUtil")[0].src = "rock.jpg";
+      document.getElementsByClassName("button")[0].style.pointerEvents = "all";
+      document.getElementsByClassName("button")[1].style.pointerEvents = "all";
+      document.getElementById('seeCompChoice').style.animationName="monAnimation";
+    }
+
+    function choixPapier(){
+      choixUtil = 'papier';
+      document.getElementsByClassName("imageUtil")[0].src = "paper.jpg";
+      document.getElementsByClassName("button")[0].style.pointerEvents = "all";
+      document.getElementsByClassName("button")[1].style.pointerEvents = "all";
+      document.getElementById('seeCompChoice').style.animationName="monAnimation";
+    }
+    function choixCiseaux(){
+      choixUtil = 'ciseaux';
+      document.getElementsByClassName("imageUtil")[0].src = "scissors.jpg";
+      document.getElementsByClassName("button")[0].style.pointerEvents = "all";
+      document.getElementsByClassName("button")[1].style.pointerEvents = "all";
+      document.getElementById('seeCompChoice').style.animationName="monAnimation";
+    }
+
+
+    function jeux(){
+
+      //on choisi un objet au hasard grace au random // on va diviser le random en 3 (car 3 objets)
+      var choixOrdi = Math.random();
+      var image = document.getElementsByClassName("imageOrdi")[0];
+      if (choixOrdi < 0.33333) {
+        image.src = "rock.jpg";
+        choixOrdi = "pierre";
+      } else if(choixOrdi <= 0.66666) {
+        image.src = "paper.jpg";
+        choixOrdi = "papier";
+      } else{
+        image.src = "scissors.jpg";
+        choixOrdi = "ciseaux";
+      }
+
+      // on va imposer des conditions (pour pouvoir comparer les objet )que l'on va stocker dans la function compare
+
+      function compare (choixUtil, choixOrdi) {
+          //on a choisi la meme chose
+           if(choixUtil === choixOrdi) {
+           alert("Egalité");
+           }
+          //util a choisi ciseaux
+          else if(choixUtil === "ciseaux"){
+
+           if(choixOrdi === "papier"){
+           alert( "tu as gagné");
+           }
+
+           else{
+           	alert( "tu as perdu");
+           }
+         }
+
+         //util a choisi papier
+         else if(choixUtil === "papier"){
+
+         if(choixOrdi === "pierre"){
+          alert("tu as gagné");
+         }
+
+           else{
+            alert( "tu as perdu");
+           }
+         }
+
+         //util a choisi pierre
+         else if(choixUtil === "pierre"){
+
+          if(choixOrdi === "ciseaux"){
+          alert( "tu as gagné");
+          }
+
+          else{
+           alert( "tu as perdu");
+          }
+        }
+
+       };
+       compare(choixUtil, choixOrdi);
+     
+   }
+
+
+    </script>
+  </body>
+</html>

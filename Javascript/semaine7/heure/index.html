@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+
+    function temps(){
+    //on recupere avec la fonction date, l'heure, minutes et secondes
+    var date = new Date;
+    var seconds = date.getSeconds();
+    var minutes = date.getMinutes();
+    var hours = date.getHours();
+    //ajout des 0 au debut des chiffres
+    if (seconds<10){
+      var seconds = 'O'+date.getSeconds();
+    }if (minutes<10){
+      var minutes = 'O'+date.getMinutes();
+    }if (hours<10){
+      var hours = 'O'+date.getHours();
+    }else{
+      console.log('pas de 0 à ajouter')
+    }
+
+    //on affiche la valeur(unnerHTML) dans la balise p grace au lien qu'on a fait (get element by id)
+    document.getElementById('affichage-heure').innerHTML = (hours +" : "+ minutes +" : " + seconds)
+    //on repete l'operation toute les 1s(on rapelle la fonction tte les 1s), ca fait comme une boucle infini
+    window.setTimeout(temps, 1000);
+    }
+
+    function changeCouleur(){
+      var couleur = document.getElementById('image');
+      couleur.style.filter = 'drop-shadow(0px 0px white)';
+      couleur.style.filter = 'drop-shadow(0px 0px #84bcc9)';
+      window.setTimeout(changeCouleur, 1000);
+    }
+
+    </script>
+    <link rel="stylesheet" href="style.css" charset="utf-8"/>
+    <title>Horloge</title>
+  </head>
+  <body>
+
+    <div id="contenu-milieu">
+      <p id='affichage-heure'><script>temps();</script></p>
+      <img src="loup2.png" id="image" onload="changeCouleur()"/>
+    </div>
+    <div id="copyright">
+      © Photo by Alexander Brown
+    </div>
+  </body>
+</html>

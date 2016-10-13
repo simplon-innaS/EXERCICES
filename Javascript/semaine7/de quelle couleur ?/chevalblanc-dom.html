@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />
+      <link rel="shortcut icon" type="image/x-icon" href="logo.jpg" />
+    <title>LE TEST</title>
+</head>
+<body>
+<div id='contenu'>
+  <div class="page" id="page1">
+    <table id='formulaire'>
+      <tr>
+        <td>
+          <p>DE QUELLE COULEUR EST LE CHEVAL BLANC D'HENRI IV ?</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input id="reponse1" type="text" placeholder="Votre reponse ici"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" value="Envoyer" onclick="verifQuestion1();"/>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="page" id="page2">
+    <table id='formulaire'>
+      <tr>
+        <td>
+          <p>COMBIEN Y-A T-IL DE 7 NAINS ?</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input id="reponse2" type="text" placeholder="Votre reponse ici"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" value="Envoyer" onclick="verifQuestion2();"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" value="Recommencer le jeux" id='recommenceJeux' name="btnActualiser" onclick="document.location.reload(true); return false;" />
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+  <script type="text/javascript">
+    function verifQuestion1(){
+      var reponseUtil1 = document.getElementById("reponse1").value;
+      var reponseQuestion1 = "blanc";
+        if (reponseUtil1.toLowerCase() == reponseQuestion1){
+          alert('Bonne reponse !');
+          document.getElementById('page2').style.display = "block";
+          document.getElementById('page1').style.display = "none";
+        }else{
+          alert('Faux, recommencez');
+        }
+      }
+
+
+      function verifQuestion2(){
+        var reponseUtil2 = document.getElementById("reponse2").value;
+        var reponseQuestion2 = "7";
+          if (parseInt(reponseUtil2) == parseInt(reponseQuestion2)){
+            alert('Bravo, vous avez repondu à toutes les questions');
+          }else{
+            alert('Non, recommencez')
+          }
+      }
+  </script>
+  <div id="resultat"></div>
+  <h1>LE TEST</h1>
+
+</body>
+</html>

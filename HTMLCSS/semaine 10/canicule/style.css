@@ -1,0 +1,76 @@
+*{
+    font-family: 'Lato', sans-serif;
+    color: #262626;
+}
+body{
+  background-color: #63C9C9;
+  margin: 50px 200px 0px 200px;
+}
+h1{
+  font-size: 70px;
+}
+#en-tete{
+  margin: 50px;
+  overflow: hidden;
+}
+
+#contenu-texte{
+  font-size: 20px;
+  margin: 0px 100px;
+}
+#soleil-image{
+   transform: rotate(8deg);
+   height: 208px;
+   width: 208px;
+}
+#thermo-image{
+   transform: rotate(-8deg);
+}
+#titre{
+margin: 80px;
+}
+.surligner{
+  background-image: url(surligner.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.element-entete{
+  float: left;
+  margin: 0px 10px;
+}
+.thermo-niveau{
+  width: 52px;
+  height: 145px;
+}
+
+#niveaux{
+  margin: 0px 40px;
+}
+#niveaux img{
+  margin-right: 30px;
+  margin-bottom: 10px;
+  vertical-align: middle;
+}
+
+#todo img{
+  vertical-align: middle;
+  float: right;
+}
+
+footer{
+  background-color: #3E9B9B;
+  font-size: 18px;
+  overflow: auto;
+  padding-bottom: 90px;
+  position: relative;
+}
+.footer{
+  float: left;
+  margin: 0px 10px;
+}
+#boire{
+  position: absolute;
+  left: 124px;
+bottom: 20px;
+
+}
