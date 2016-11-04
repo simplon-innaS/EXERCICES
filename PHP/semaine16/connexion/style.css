@@ -1,0 +1,15 @@
+*{
+  font-family: arial;
+  color: white;
+}
+body{
+  background-color: #333333;
+}
+form{
+  justify-content: center;
+}
+
+.champs{
+display: inline;
+display: flex;
+}
